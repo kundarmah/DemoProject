@@ -8,7 +8,7 @@ const App: FunctionComponent = () => {
     {label: '2', color: 'green'},
     {label: '3', color: 'blue'},
   ];
-
+  // Added: GIAN
   return (
     <SafeAreaView style={styles.container}>
       <List data={data} />
