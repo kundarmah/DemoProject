@@ -1,5 +1,4 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
 import Button from '.';
 
 interface ListProps {
@@ -22,17 +21,3 @@ const List = ({data}: ListProps) => {
 };
 
 export default List;
-
-const styles = StyleSheet.create({
-  button: {
-    backgroundColor: 'green',
-    margin: 10,
-    width: '50%',
-    padding: 10,
-    borderRadius: 4,
-  },
-  text: {
-    color: 'white',
-    textAlign: 'center',
-  },
-});

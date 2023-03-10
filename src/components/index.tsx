@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 interface ButtonProps {
   kahitAno: string;
@@ -8,14 +9,15 @@ interface ButtonProps {
 }
 
 const Button = ({kahitAno, color, setColor}: ButtonProps) => {
-  const onChangePress = num => {
+  const onChangePress = () => {
     setColor('orange');
   };
 
   return (
     <TouchableOpacity
-      onPress={() => onChangePress('1')}
+      onPress={() => onChangePress()}
       style={[styles.button, {backgroundColor: color}]}>
+      <Icon name="glass" size={30} color="white" />
       <Text style={styles.text}>{kahitAno}</Text>
     </TouchableOpacity>
   );
@@ -30,6 +32,8 @@ const styles = StyleSheet.create({
     width: '50%',
     padding: 10,
     borderRadius: 4,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   text: {
     color: 'white',
